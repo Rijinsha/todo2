@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--&lt;!&ndash;if detals in same page this code copy to past home&ndash;&gt;-->
+<!--{% for i in tsk %}-->
+<!--{{i.name}}-->
+<!--{{i.priority}}-->
+<!--{% endfor %}-->
+<!--</body>-->
+<!--</html>-->
+
+<!--list view details -->
+
+{% block content %}
+<div class="shadow card">
+                 <div class="card-body">
+<!--                     here  name task is object name -->
+                     <h4 class="card-title"> {{task.name}}</h4>
+                     <p><b>{{task.priority}}</b></p>
+                     <p><b>{{task.date}}</b></p>
+                     <a class="btn btn-danger" href="{% url 'delete' task.id %}">delete</a>
+                     <a class="btn btn-success" href="{% url 'update' task.id %}">Update</a>
+                 </div>
+             </div>
+{% endblock %}
